@@ -5,10 +5,12 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ChuckServiceImpl implements ChuckService{
+
     private final ChuckNorrisQuotes chuckNorrisQuotes;
 
-    public ChuckServiceImpl() {
-        this.chuckNorrisQuotes = new ChuckNorrisQuotes();
+    //@Autowired
+    public ChuckServiceImpl(ChuckNorrisQuotes chuckNorrisQuotes) {
+        this.chuckNorrisQuotes = chuckNorrisQuotes;
     }
 
     @Override
